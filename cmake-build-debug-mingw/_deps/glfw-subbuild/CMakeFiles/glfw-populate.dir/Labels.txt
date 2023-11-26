@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/CMakeFiles/glfw-populate.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/CMakeFiles/glfw-populate-complete.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-build.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-configure.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-download.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-install.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-mkdir.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-patch.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-test.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update.rule

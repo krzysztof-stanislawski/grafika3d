@@ -1,0 +1,14 @@
+# Target labels
+ glm-populate
+# Source files and their labels
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/CMakeFiles/glm-populate
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/CMakeFiles/glm-populate.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/CMakeFiles/glm-populate-complete.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-build.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-configure.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-download.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-install.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-mkdir.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-patch.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-test.rule
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-update.rule
