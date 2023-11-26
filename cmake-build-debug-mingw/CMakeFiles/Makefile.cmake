@@ -63,7 +63,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "K:/studia/grafika3d/src/Application/CMakeLists.txt"
   "K:/studia/grafika3d/src/Assignments/Colors/CMakeLists.txt"
   "K:/studia/grafika3d/src/Assignments/House/CMakeLists.txt"
+  "K:/studia/grafika3d/src/Assignments/Indices/CMakeLists.txt"
   "K:/studia/grafika3d/src/Assignments/Triangle/CMakeLists.txt"
+  "K:/studia/grafika3d/src/Assignments/Uniforms/CMakeLists.txt"
   "K:/studia/grafika3d/src/Engine/CMakeLists.txt"
   "K:/studia/grafika3d/src/ObjectReader/CMakeLists.txt"
   "K:/studia/grafika3d/src/XeEngine/CMakeLists.txt"
@@ -97,6 +99,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Assignments/Triangle/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Assignments/House/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Assignments/Colors/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Assignments/Indices/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Assignments/Uniforms/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -113,4 +117,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Assignments/Triangle/CMakeFiles/Triangle.dir/DependInfo.cmake"
   "src/Assignments/House/CMakeFiles/House.dir/DependInfo.cmake"
   "src/Assignments/Colors/CMakeFiles/Colors.dir/DependInfo.cmake"
+  "src/Assignments/Indices/CMakeFiles/Indices.dir/DependInfo.cmake"
+  "src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/DependInfo.cmake"
   )
