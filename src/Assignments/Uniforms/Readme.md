@@ -78,20 +78,3 @@ W shaderze, przy użyciu danych z bufora jednorodnego, pomnożono wartości RGB 
 >Invalid program
 >````
 > **Rozwiązanie:** Zaktualizowano wersję GLSL w shaderze do wersji 420, obsługującej kwalifikator 'binding'.
-
->3. Obracanie domem go ukryło
->> **Opis:** Dokonując transformacji krok po kroku zauważono, iż ostatnia transformacja - obrót spowodowała zniknięcie domu.
->
->**Translacja**
-> 
->![Translacja](img_2.png)
->
->**+Skalowanie**
-> 
->![+Skalowanie](img_1.png)
->
->**+Rotacja**
->
->![+Rotacja](img.png)
->
-> **Tymczasowe Rozwiązanie:** Według ćwiczącego poprawnie wykonano kroki ćwiczenia, nie potrafi określić czy wynik jest zamierzony, dlatego wykorzystano przechowywanie wektorów transformacji. Po uruchomieniu wyświetlany jest wynik po wykonaniu 2 z 3 transformacji, a linijka z wykonanym kodem zgodnie z wytycznymi została zakomentowana.

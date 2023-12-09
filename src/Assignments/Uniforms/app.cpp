@@ -67,8 +67,8 @@ void SimpleShapeApplication::init() {
 
     // Load data into the buffer respecting std140 layout rules
     // Calculate offsets and sizes based on std140 rules
-        // Rule 1: Base alignment of float is 4 bytes
-        // Rule 3: Array treated as tightly packed scalars
+    // Rule 1: Base alignment of float is 4 bytes
+    // Rule 3: Array treated as tightly packed scalars
     GLintptr strengthOffset = 0;  // Offset for strength (4 bytes)
     GLintptr colorOffset = 4 * sizeof(float);  // Offset for color (3 * 4 bytes)
 
@@ -84,17 +84,17 @@ void SimpleShapeApplication::init() {
     // Allocate memory for the buffer respecting std140 layout rules for the transformation block
     // Rule 2: Alignment of vec2 is 8 bytes (two floats)
     // Rule 4: Alignment of vec2 array elements is 16 bytes
-    glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::vec4) * 2, nullptr, GL_STATIC_DRAW);
+    glBufferData(GL_UNIFORM_BUFFER, 12*sizeof(float), nullptr, GL_STATIC_DRAW);
 
     glBindBufferBase(GL_UNIFORM_BUFFER, 1, transformationBuffer);
 
     // Create variables to hold values to be loaded into the buffer
-    float theta = 1.0f * glm::pi<float>() / 6.0f;
+    float theta = 1.0*glm::pi<float>()/6.0f;
     auto cs = std::cos(theta);
     auto ss = std::sin(theta);
-    glm::mat2 rot{ cs, ss, -ss, cs };
-    glm::vec2 trans{ 0.0f, -0.25f };
-    glm::vec2 scale{ 0.5f, 0.5f };
+    glm::mat2 rot{cs,ss,-ss,cs};
+    glm::vec2 trans{0.0,  -0.25};
+    glm::vec2 scale{0.5, 0.5};
 
     glBufferSubData(GL_UNIFORM_BUFFER, 0*sizeof(float), 2*sizeof(float), &scale);
     glBufferSubData(GL_UNIFORM_BUFFER, 2*sizeof(float), 2*sizeof(float), &trans);
