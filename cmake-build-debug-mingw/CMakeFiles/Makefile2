@@ -75,6 +75,7 @@ all: src/Assignments/House/all
 all: src/Assignments/Colors/all
 all: src/Assignments/Indices/all
 all: src/Assignments/Uniforms/all
+all: src/Assignments/PVM/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -90,6 +91,7 @@ preinstall: src/Assignments/House/preinstall
 preinstall: src/Assignments/Colors/preinstall
 preinstall: src/Assignments/Indices/preinstall
 preinstall: src/Assignments/Uniforms/preinstall
+preinstall: src/Assignments/PVM/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -106,6 +108,7 @@ clean: src/Assignments/House/clean
 clean: src/Assignments/Colors/clean
 clean: src/Assignments/Indices/clean
 clean: src/Assignments/Uniforms/clean
+clean: src/Assignments/PVM/clean
 .PHONY : clean
 
 #=============================================================================
@@ -246,6 +249,21 @@ src/Assignments/Indices/clean: src/Assignments/Indices/CMakeFiles/Indices.dir/cl
 .PHONY : src/Assignments/Indices/clean
 
 #=============================================================================
+# Directory level rules for directory src/Assignments/PVM
+
+# Recursive "all" directory target.
+src/Assignments/PVM/all: src/Assignments/PVM/CMakeFiles/PVM.dir/all
+.PHONY : src/Assignments/PVM/all
+
+# Recursive "preinstall" directory target.
+src/Assignments/PVM/preinstall:
+.PHONY : src/Assignments/PVM/preinstall
+
+# Recursive "clean" directory target.
+src/Assignments/PVM/clean: src/Assignments/PVM/CMakeFiles/PVM.dir/clean
+.PHONY : src/Assignments/PVM/clean
+
+#=============================================================================
 # Directory level rules for directory src/Assignments/Triangle
 
 # Recursive "all" directory target.
@@ -327,7 +345,7 @@ src/XeEngine/clean: src/XeEngine/CMakeFiles/xe-engine.dir/clean
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=23 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=26 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -379,7 +397,7 @@ _deps/glfw-build/CMakeFiles/uninstall.dir/clean:
 _deps/glfw-build/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps\glfw-build\src\CMakeFiles\glfw.dir\build.make _deps/glfw-build/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\glfw-build\src\CMakeFiles\glfw.dir\build.make _deps/glfw-build/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target glfw"
 .PHONY : _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -405,7 +423,7 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/clean:
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps\glfw-build\src\CMakeFiles\update_mappings.dir\build.make _deps/glfw-build/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\glfw-build\src\CMakeFiles\update_mappings.dir\build.make _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=56 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=59 "Built target update_mappings"
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -431,7 +449,7 @@ _deps/glfw-build/src/CMakeFiles/update_mappings.dir/clean:
 _deps/spdlog-build/CMakeFiles/spdlog.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps\spdlog-build\CMakeFiles\spdlog.dir\build.make _deps/spdlog-build/CMakeFiles/spdlog.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\spdlog-build\CMakeFiles\spdlog.dir\build.make _deps/spdlog-build/CMakeFiles/spdlog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=48,49,50,51,52,53,54,55 "Built target spdlog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=51,52,53,54,55,56,57,58 "Built target spdlog"
 .PHONY : _deps/spdlog-build/CMakeFiles/spdlog.dir/all
 
 # Build rule for subdir invocation for target.
@@ -458,7 +476,7 @@ src/Application/CMakeFiles/application.dir/all: CMakeFiles/glad.dir/all
 src/Application/CMakeFiles/application.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Application\CMakeFiles\application.dir\build.make src/Application/CMakeFiles/application.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Application\CMakeFiles\application.dir\build.make src/Application/CMakeFiles/application.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=16,17,18,19 "Built target application"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=19,20,21,22 "Built target application"
 .PHONY : src/Application/CMakeFiles/application.dir/all
 
 # Build rule for subdir invocation for target.
@@ -486,7 +504,7 @@ src/ObjectReader/CMakeFiles/objreader.dir/all: _deps/glfw-build/src/CMakeFiles/g
 src/ObjectReader/CMakeFiles/objreader.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.dir/all
 	$(MAKE) $(MAKESILENT) -f src\ObjectReader\CMakeFiles\objreader.dir\build.make src/ObjectReader/CMakeFiles/objreader.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\ObjectReader\CMakeFiles\objreader.dir\build.make src/ObjectReader/CMakeFiles/objreader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=46,47 "Built target objreader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=49,50 "Built target objreader"
 .PHONY : src/ObjectReader/CMakeFiles/objreader.dir/all
 
 # Build rule for subdir invocation for target.
@@ -515,7 +533,7 @@ src/XeEngine/CMakeFiles/xe-engine.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.
 src/XeEngine/CMakeFiles/xe-engine.dir/all: src/ObjectReader/CMakeFiles/objreader.dir/all
 	$(MAKE) $(MAKESILENT) -f src\XeEngine\CMakeFiles\xe-engine.dir\build.make src/XeEngine/CMakeFiles/xe-engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\XeEngine\CMakeFiles\xe-engine.dir\build.make src/XeEngine/CMakeFiles/xe-engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65 "Built target xe-engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=60,61,62,63,64,65,66,67,68 "Built target xe-engine"
 .PHONY : src/XeEngine/CMakeFiles/xe-engine.dir/all
 
 # Build rule for subdir invocation for target.
@@ -542,7 +560,7 @@ src/Engine/CMakeFiles/engine.dir/all: CMakeFiles/glad.dir/all
 src/Engine/CMakeFiles/engine.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Engine\CMakeFiles\engine.dir\build.make src/Engine/CMakeFiles/engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Engine\CMakeFiles\engine.dir\build.make src/Engine/CMakeFiles/engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=20,21,22 "Built target engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=23,24,25 "Built target engine"
 .PHONY : src/Engine/CMakeFiles/engine.dir/all
 
 # Build rule for subdir invocation for target.
@@ -570,7 +588,7 @@ src/Assignments/Triangle/CMakeFiles/Triangle.dir/all: _deps/glfw-build/src/CMake
 src/Assignments/Triangle/CMakeFiles/Triangle.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Triangle\CMakeFiles\Triangle.dir\build.make src/Assignments/Triangle/CMakeFiles/Triangle.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Triangle\CMakeFiles\Triangle.dir\build.make src/Assignments/Triangle/CMakeFiles/Triangle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=10,11,12 "Built target Triangle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=13,14,15 "Built target Triangle"
 .PHONY : src/Assignments/Triangle/CMakeFiles/Triangle.dir/all
 
 # Build rule for subdir invocation for target.
@@ -682,7 +700,7 @@ src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all: _deps/glfw-build/src/CMake
 src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Uniforms\CMakeFiles\Uniforms.dir\build.make src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Uniforms\CMakeFiles\Uniforms.dir\build.make src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=13,14,15 "Built target Uniforms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=16,17,18 "Built target Uniforms"
 .PHONY : src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all
 
 # Build rule for subdir invocation for target.
@@ -700,6 +718,34 @@ Uniforms: src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/rule
 src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Uniforms\CMakeFiles\Uniforms.dir\build.make src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/clean
 .PHONY : src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/clean
+
+#=============================================================================
+# Target rules for target src/Assignments/PVM/CMakeFiles/PVM.dir
+
+# All Build rule for target.
+src/Assignments/PVM/CMakeFiles/PVM.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/PVM/CMakeFiles/PVM.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
+src/Assignments/PVM/CMakeFiles/PVM.dir/all: src/Application/CMakeFiles/application.dir/all
+	$(MAKE) $(MAKESILENT) -f src\Assignments\PVM\CMakeFiles\PVM.dir\build.make src/Assignments/PVM/CMakeFiles/PVM.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\Assignments\PVM\CMakeFiles\PVM.dir\build.make src/Assignments/PVM/CMakeFiles/PVM.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=10,11,12 "Built target PVM"
+.PHONY : src/Assignments/PVM/CMakeFiles/PVM.dir/all
+
+# Build rule for subdir invocation for target.
+src/Assignments/PVM/CMakeFiles/PVM.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles 30
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Assignments/PVM/CMakeFiles/PVM.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles 0
+.PHONY : src/Assignments/PVM/CMakeFiles/PVM.dir/rule
+
+# Convenience name for target.
+PVM: src/Assignments/PVM/CMakeFiles/PVM.dir/rule
+.PHONY : PVM
+
+# clean rule for target.
+src/Assignments/PVM/CMakeFiles/PVM.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\Assignments\PVM\CMakeFiles\PVM.dir\build.make src/Assignments/PVM/CMakeFiles/PVM.dir/clean
+.PHONY : src/Assignments/PVM/CMakeFiles/PVM.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

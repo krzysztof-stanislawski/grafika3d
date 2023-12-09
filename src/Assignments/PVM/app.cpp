@@ -1,14 +1,10 @@
-//
-// Created by pbialas on 25.09.2020.
-//
-
 #include "app.h"
 
 #include <iostream>
 #include <vector>
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
-#include <glm/gtc/matrix_transform.hpp>
+
 #include "Application/utils.h"
 
 void SimpleShapeApplication::init() {
