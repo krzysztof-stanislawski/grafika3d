@@ -338,7 +338,15 @@ src/Assignments/PVM/CMakeFiles/PVM.dir/app.cpp.obj: K:/studia/grafika3d/src/Assi
   _deps/glm-src/glm/gtc/constants.hpp \
   _deps/glm-src/glm/ext/scalar_constants.hpp \
   _deps/glm-src/glm/ext/scalar_constants.inl \
-  _deps/glm-src/glm/gtc/constants.inl
+  _deps/glm-src/glm/gtc/constants.inl \
+  _deps/glm-src/glm/gtc/matrix_transform.hpp \
+  _deps/glm-src/glm/ext/matrix_projection.hpp \
+  _deps/glm-src/glm/ext/matrix_projection.inl \
+  _deps/glm-src/glm/ext/matrix_clip_space.hpp \
+  _deps/glm-src/glm/ext/matrix_clip_space.inl \
+  _deps/glm-src/glm/ext/matrix_transform.hpp \
+  _deps/glm-src/glm/ext/matrix_transform.inl \
+  _deps/glm-src/glm/gtc/matrix_transform.inl
 
 src/Assignments/PVM/CMakeFiles/PVM.dir/main.cpp.obj: K:/studia/grafika3d/src/Assignments/PVM/main.cpp \
   K:/studia/grafika3d/src/Assignments/PVM/app.h \
@@ -534,6 +542,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
 
+_deps/glm-src/glm/ext/matrix_transform.inl:
+
 _deps/glm-src/glm/ext/matrix_double4x2.hpp:
 
 _deps/glm-src/glm/ext/vector_double4.hpp:
@@ -674,6 +684,8 @@ _deps/glm-src/glm/ext/matrix_double4x3_precision.hpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h:
 
+_deps/glm-src/glm/gtc/matrix_transform.inl:
+
 C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h:
@@ -800,7 +812,11 @@ _deps/glm-src/glm/detail/type_mat3x4.hpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/sys/types.h:
 
+_deps/glm-src/glm/ext/matrix_projection.inl:
+
 C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/process.h:
+
+_deps/glm-src/glm/ext/matrix_projection.hpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_startup.h:
 
@@ -1012,6 +1028,8 @@ _deps/glm-src/glm/ext/vector_int2_sized.hpp:
 
 _deps/glm-src/glm/detail/compute_vector_relational.hpp:
 
+_deps/glm-src/glm/ext/matrix_clip_space.inl:
+
 _deps/glm-src/glm/ext/vector_float2.hpp:
 
 _deps/glm-src/glm/ext/vector_float2_precision.hpp:
@@ -1099,6 +1117,8 @@ _deps/glm-src/glm/ext/matrix_float2x3_precision.hpp:
 _deps/glm-src/glm/detail/type_mat2x4.inl:
 
 _deps/glm-src/glm/ext/matrix_double2x4_precision.hpp:
+
+_deps/glm-src/glm/ext/matrix_transform.hpp:
 
 _deps/glm-src/glm/ext/matrix_float2x4.hpp:
 
@@ -1189,5 +1209,9 @@ _deps/glm-src/glm/detail/func_integer.inl:
 _deps/glm-src/glm/ext/scalar_constants.inl:
 
 _deps/glm-src/glm/gtc/constants.inl:
+
+_deps/glm-src/glm/gtc/matrix_transform.hpp:
+
+_deps/glm-src/glm/ext/matrix_clip_space.hpp:
 
 K:/studia/grafika3d/src/Assignments/PVM/main.cpp:

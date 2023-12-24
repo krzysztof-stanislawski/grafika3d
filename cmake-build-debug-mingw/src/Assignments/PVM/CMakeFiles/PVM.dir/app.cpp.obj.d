@@ -336,4 +336,12 @@ src/Assignments/PVM/CMakeFiles/PVM.dir/app.cpp.obj: \
  K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/gtc/constants.hpp \
  K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/scalar_constants.hpp \
  K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/scalar_constants.inl \
- K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/gtc/constants.inl
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/gtc/constants.inl \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/gtc/matrix_transform.hpp \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/matrix_projection.hpp \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/matrix_projection.inl \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/matrix_clip_space.hpp \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/matrix_clip_space.inl \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/matrix_transform.hpp \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/ext/matrix_transform.inl \
+ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-src/glm/gtc/matrix_transform.inl

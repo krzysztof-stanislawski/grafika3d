@@ -4,6 +4,7 @@
 #include <vector>
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "Application/utils.h"
 
@@ -31,49 +32,63 @@ void SimpleShapeApplication::init() {
     std::vector<GLushort> indices = {0, 1, 2, 0, 3, 4, 0, 4, 1,};
 
     // Generate buffers and load data
-    GLuint v_buffer_handle,i_buffer_handle;
+    GLuint v_buffer_handle, i_buffer_handle,uniformBuffer,transformationBuffer,u_pvm_buffer;
+
     glGenBuffers(1, &v_buffer_handle);
     glGenBuffers(1, &i_buffer_handle);
+    glGenBuffers(1, &uniformBuffer);
+    glGenBuffers(1, &transformationBuffer);
+    glGenBuffers(1, &u_pvm_buffer);
 
     glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, i_buffer_handle);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), indices.data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-    // Create uniform buffer for strength and color
-    GLuint uniformBuffer;
-    glGenBuffers(1, &uniformBuffer);
-    glBindBuffer(GL_UNIFORM_BUFFER, uniformBuffer);
-    glBufferData(GL_UNIFORM_BUFFER, 8 * sizeof(float), nullptr, GL_STATIC_DRAW);
-    glBindBufferBase(GL_UNIFORM_BUFFER, 0, uniformBuffer);
-
-    // Load data into the buffer respecting std140 layout rules
     float strength = 0.75f;
-    float color[3] = {0.2f, 0.5f, 0.8f};
-
+    GLfloat color[3] = {0.2f, 0.5f, 0.8f};
     GLintptr strengthOffset = 0;
     GLintptr colorOffset = 4 * sizeof(float);
 
-    glBufferSubData(GL_UNIFORM_BUFFER, strengthOffset, sizeof(float), &strength);
+    glBindBuffer(GL_UNIFORM_BUFFER, uniformBuffer);
+    glBufferData(GL_UNIFORM_BUFFER, 8 * sizeof(float), nullptr, GL_STATIC_DRAW);
+    glBufferSubData(GL_UNIFORM_BUFFER, strengthOffset, sizeof(float), & strength);
     glBufferSubData(GL_UNIFORM_BUFFER, colorOffset, 3 * sizeof(float), color);
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
-    // Create a new buffer handle for the transformation block
-    GLuint transformationBuffer;
-    glGenBuffers(1, &transformationBuffer);
+
     glBindBuffer(GL_UNIFORM_BUFFER, transformationBuffer);
-    glBufferData(GL_UNIFORM_BUFFER, 12*sizeof(float), nullptr, GL_STATIC_DRAW);
+    glBufferData(GL_UNIFORM_BUFFER, 12 * sizeof(float), nullptr, GL_STATIC_DRAW);
     glBindBufferBase(GL_UNIFORM_BUFFER, 1, transformationBuffer);
 
-    GLuint u_pvm_buffer_;
-    glGenBuffers(1, &u_pvm_buffer_);
-    glBindBuffer(GL_UNIFORM_BUFFER, u_pvm_buffer_);
-
     // Create PVM
-    glm::mat4 PVM(1.0f);
+    glm::mat4 viewMat = glm::lookAt(
+            glm::vec3(-1.0f, -1.f, -5.0f),
+            glm::vec3(0.0f, 1.0f, 0.0f),
+            glm::vec3(0.0f, 1.0f, 0.0f)
+    );
+    auto[w, h] = frame_buffer_size();
+    glm::mat4 perMat = glm::perspective(glm::radians(45.0f), GLfloat(w) / GLfloat(h), 0.1f, 100.0f);
+    glm::mat4 modelMat = glm::mat4(1.0f);
+    modelMat = glm::rotate(modelMat, glm::radians(115.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    glm::mat4 PVM = perMat * viewMat * modelMat;
 
+    glBindBuffer(GL_UNIFORM_BUFFER, u_pvm_buffer);
     glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), &PVM[0][0], GL_STATIC_DRAW);
-    glBindBufferBase(GL_UNIFORM_BUFFER, 1, u_pvm_buffer_);
+    glBindBufferBase(GL_UNIFORM_BUFFER, 1, u_pvm_buffer);
+
+    GLintptr index = 0;
+    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[0]);
+    index += 4 * sizeof(float);
+    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[1]);
+    index += 4 * sizeof(float);
+    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[2]);
+    index += 4 * sizeof(float);
+    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[3]);
+
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
     // Generate Vertex Array Object (VAO)

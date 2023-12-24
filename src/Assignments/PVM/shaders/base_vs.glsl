@@ -11,6 +11,5 @@ out vec3 FragColor;                     // Output interpolated color to fragment
 
 void main() {
     gl_Position =  PVM * aPos;
-    gl_Position.zw = aPos.zw;
     FragColor = aColor;                 // Pass color to fragment shader
 }

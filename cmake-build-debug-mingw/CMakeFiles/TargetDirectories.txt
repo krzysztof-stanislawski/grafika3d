@@ -26,6 +26,7 @@ K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/CMakeFiles/list_inst
 K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/CMakeFiles/install.dir
 K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/CMakeFiles/install/local.dir
 K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/CMakeFiles/install/strip.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/glm/CMakeFiles/glm.dir
 K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/glm/CMakeFiles/edit_cache.dir
 K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/glm/CMakeFiles/rebuild_cache.dir
 K:/studia/grafika3d/cmake-build-debug-mingw/_deps/glm-build/glm/CMakeFiles/list_install_components.dir
@@ -109,3 +110,10 @@ K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/PVM/CMakeFiles/list_
 K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/PVM/CMakeFiles/install.dir
 K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/PVM/CMakeFiles/install/local.dir
 K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/PVM/CMakeFiles/install/strip.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/CMakeFiles/Pyramid.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/CMakeFiles/edit_cache.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/CMakeFiles/rebuild_cache.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/CMakeFiles/list_install_components.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/CMakeFiles/install.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/CMakeFiles/install/local.dir
+K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/CMakeFiles/install/strip.dir

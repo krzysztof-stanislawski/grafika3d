@@ -213,6 +213,19 @@ update_mappings/fast:
 .PHONY : update_mappings/fast
 
 #=============================================================================
+# Target rules for targets named glm
+
+# Build rule for target.
+glm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 glm
+.PHONY : glm
+
+# fast build rule for target.
+glm/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\glm-build\glm\CMakeFiles\glm.dir\build.make _deps/glm-build/glm/CMakeFiles/glm.dir/build
+.PHONY : glm/fast
+
+#=============================================================================
 # Target rules for targets named spdlog
 
 # Build rule for target.
@@ -355,6 +368,19 @@ PVM/fast:
 	$(MAKE) $(MAKESILENT) -f src\Assignments\PVM\CMakeFiles\PVM.dir\build.make src/Assignments/PVM/CMakeFiles/PVM.dir/build
 .PHONY : PVM/fast
 
+#=============================================================================
+# Target rules for targets named Pyramid
+
+# Build rule for target.
+Pyramid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Pyramid
+.PHONY : Pyramid
+
+# fast build rule for target.
+Pyramid/fast:
+	$(MAKE) $(MAKESILENT) -f src\Assignments\Pyramid\CMakeFiles\Pyramid.dir\build.make src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/build
+.PHONY : Pyramid/fast
+
 src/3rdParty/glad/glad_4_6/glad/src/gl.obj: src/3rdParty/glad/glad_4_6/glad/src/gl.c.obj
 .PHONY : src/3rdParty/glad/glad_4_6/glad/src/gl.obj
 
@@ -397,12 +423,14 @@ help:
 	@echo ... House
 	@echo ... Indices
 	@echo ... PVM
+	@echo ... Pyramid
 	@echo ... Triangle
 	@echo ... Uniforms
 	@echo ... application
 	@echo ... engine
 	@echo ... glad
 	@echo ... glfw
+	@echo ... glm
 	@echo ... objreader
 	@echo ... spdlog
 	@echo ... xe-engine
