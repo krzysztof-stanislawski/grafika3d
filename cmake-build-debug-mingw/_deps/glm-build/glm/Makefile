@@ -160,6 +160,44 @@ depend:
 	cd /d K:\studia\grafika3d\cmake-build-debug-mingw && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+_deps/glm-build/glm/CMakeFiles/glm.dir/rule:
+	cd /d K:\studia\grafika3d\cmake-build-debug-mingw && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/glm-build/glm/CMakeFiles/glm.dir/rule
+.PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/rule
+
+# Convenience name for target.
+glm: _deps/glm-build/glm/CMakeFiles/glm.dir/rule
+.PHONY : glm
+
+# fast build rule for target.
+glm/fast:
+	cd /d K:\studia\grafika3d\cmake-build-debug-mingw && $(MAKE) $(MAKESILENT) -f _deps\glm-build\glm\CMakeFiles\glm.dir\build.make _deps/glm-build/glm/CMakeFiles/glm.dir/build
+.PHONY : glm/fast
+
+detail/glm.obj: detail/glm.cpp.obj
+.PHONY : detail/glm.obj
+
+# target to build an object file
+detail/glm.cpp.obj:
+	cd /d K:\studia\grafika3d\cmake-build-debug-mingw && $(MAKE) $(MAKESILENT) -f _deps\glm-build\glm\CMakeFiles\glm.dir\build.make _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj
+.PHONY : detail/glm.cpp.obj
+
+detail/glm.i: detail/glm.cpp.i
+.PHONY : detail/glm.i
+
+# target to preprocess a source file
+detail/glm.cpp.i:
+	cd /d K:\studia\grafika3d\cmake-build-debug-mingw && $(MAKE) $(MAKESILENT) -f _deps\glm-build\glm\CMakeFiles\glm.dir\build.make _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.i
+.PHONY : detail/glm.cpp.i
+
+detail/glm.s: detail/glm.cpp.s
+.PHONY : detail/glm.s
+
+# target to generate assembly for a file
+detail/glm.cpp.s:
+	cd /d K:\studia\grafika3d\cmake-build-debug-mingw && $(MAKE) $(MAKESILENT) -f _deps\glm-build\glm\CMakeFiles\glm.dir\build.make _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.s
+.PHONY : detail/glm.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -172,6 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... glm
+	@echo ... detail/glm.obj
+	@echo ... detail/glm.i
+	@echo ... detail/glm.s
 .PHONY : help
 
 
