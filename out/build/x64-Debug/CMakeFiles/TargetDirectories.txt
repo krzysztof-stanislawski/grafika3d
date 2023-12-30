@@ -100,3 +100,9 @@ K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Pyramid/CMakeFiles/rebui
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Pyramid/CMakeFiles/list_install_components.dir
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Pyramid/CMakeFiles/install.dir
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Pyramid/CMakeFiles/install/local.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Resizing/CMakeFiles/Resizing.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Resizing/CMakeFiles/edit_cache.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Resizing/CMakeFiles/rebuild_cache.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Resizing/CMakeFiles/list_install_components.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Resizing/CMakeFiles/install.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Resizing/CMakeFiles/install/local.dir
