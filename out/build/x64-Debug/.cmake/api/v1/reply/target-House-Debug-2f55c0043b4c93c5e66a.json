@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/Assignments/Colors/Colors.exe"
+			"path" : "src/Assignments/House/House.exe"
 		},
 		{
-			"path" : "src/Assignments/Colors/Colors.pdb"
+			"path" : "src/Assignments/House/House.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -19,7 +19,7 @@
 		],
 		"files" : 
 		[
-			"src/Assignments/Colors/CMakeLists.txt",
+			"src/Assignments/House/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -107,11 +107,11 @@
 				},
 				{
 					"backtrace" : 5,
-					"define" : "PROJECT_DIR=\"K:/studia/grafika3d/src/Assignments/Colors\""
+					"define" : "PROJECT_DIR=\"K:/studia/grafika3d/src/Assignments/House\""
 				},
 				{
 					"backtrace" : 5,
-					"define" : "PROJECT_NAME=\"Colors\""
+					"define" : "PROJECT_NAME=\"House\""
 				},
 				{
 					"backtrace" : 6,
@@ -165,22 +165,22 @@
 	[
 		{
 			"backtrace" : 1,
-			"id" : "glfw::@fa9f4482d3a2b070f206"
-		},
-		{
-			"backtrace" : 1,
 			"id" : "glad::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 1,
-			"id" : "glm::@ce54d98d7b326a3e12a8"
+			"id" : "glfw::@fa9f4482d3a2b070f206"
 		},
 		{
 			"backtrace" : 1,
 			"id" : "application::@63f4a4cc0e32de8c050b"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "glm::@ce54d98d7b326a3e12a8"
 		}
 	],
-	"id" : "Colors::@5062fdf58fc14a2873b4",
+	"id" : "House::@a57c938c6b5fe80120df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -235,12 +235,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Colors",
-	"nameOnDisk" : "Colors.exe",
+	"name" : "House",
+	"nameOnDisk" : "House.exe",
 	"paths" : 
 	{
-		"build" : "src/Assignments/Colors",
-		"source" : "src/Assignments/Colors"
+		"build" : "src/Assignments/House",
+		"source" : "src/Assignments/House"
 	},
 	"sourceGroups" : 
 	[
@@ -272,18 +272,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/Assignments/Colors/main.cpp",
+			"path" : "src/Assignments/House/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/Assignments/Colors/app.h",
+			"path" : "src/Assignments/House/app.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/Assignments/Colors/app.cpp",
+			"path" : "src/Assignments/House/app.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
