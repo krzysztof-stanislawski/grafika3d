@@ -4,121 +4,116 @@
 #include <vector>
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "Application/utils.h"
 
 void SimpleShapeApplication::init() {
-    // Compile shaders and create program
-    auto program = xe::utils::create_program(
-            {{GL_VERTEX_SHADER, std::string(PROJECT_DIR) + "/shaders/base_vs.glsl"},
-             {GL_FRAGMENT_SHADER, std::string(PROJECT_DIR) + "/shaders/base_fs.glsl"}});
 
-    if (!program) {
-        std::cerr << "Invalid program" << std::endl;
-        exit(-1);
-    }
+	auto [w, h] = frame_buffer_size();
 
-    // Define vertex and index data
-    std::vector<GLfloat> vertices = {
-            -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-            0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-            0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-            -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-            0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-            -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-    };
+	auto program = xe::utils::create_program(
+		{ {GL_VERTEX_SHADER, std::string(PROJECT_DIR) + "/shaders/base_vs.glsl"},
+		 {GL_FRAGMENT_SHADER, std::string(PROJECT_DIR) + "/shaders/base_fs.glsl"} });
 
-    std::vector<GLushort> indices = {0, 1, 2, 0, 3, 4, 0, 4, 1,};
+	if (!program) {
+		std::cerr << "Invalid program" << std::endl;
+		exit(-1);
+	}
 
-    // Generate buffers and load data
-    GLuint v_buffer_handle, i_buffer_handle,uniformBuffer,transformationBuffer,u_pvm_buffer;
+	// Vertex and index data
+	std::vector<GLfloat> vertices = {
+			-0.5f, 0.0f, 0.0f,
+			0.5f, 0.0f, 0.0f,
+			0.0f, 0.5f, 0.0f,
+			-0.5f, -0.5f, 0.0f,
+			0.5f, -0.5f, 0.0f,
+	};
 
-    glGenBuffers(1, &v_buffer_handle);
-    glGenBuffers(1, &i_buffer_handle);
-    glGenBuffers(1, &uniformBuffer);
-    glGenBuffers(1, &transformationBuffer);
-    glGenBuffers(1, &u_pvm_buffer);
+	indices = { 0, 1, 2, 0, 3, 4, 0, 4, 1 };
 
-    glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+	// Uniform buffer setup for 'Modifier'
+	GLuint uniformBuffer;
+	glGenBuffers(1, &uniformBuffer);
+	glBindBuffer(GL_UNIFORM_BUFFER, uniformBuffer);
+	glBufferData(GL_UNIFORM_BUFFER, 8 * sizeof(float), nullptr, GL_STATIC_DRAW);
+	glBindBufferBase(GL_UNIFORM_BUFFER, 0, uniformBuffer);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, i_buffer_handle);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), indices.data(), GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	// Set uniform data for 'Modifier'
+	float strength = 1.0f;
+	float color[3] = { 0.0f, 1.0f, 0.0f };
 
-    float strength = 0.75f;
-    GLfloat color[3] = {0.2f, 0.5f, 0.8f};
-    GLintptr strengthOffset = 0;
-    GLintptr colorOffset = 4 * sizeof(float);
+	glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(float), &strength);
+	glBufferSubData(GL_UNIFORM_BUFFER, 4 * sizeof(float), 3 * sizeof(float), &color);
 
-    glBindBuffer(GL_UNIFORM_BUFFER, uniformBuffer);
-    glBufferData(GL_UNIFORM_BUFFER, 8 * sizeof(float), nullptr, GL_STATIC_DRAW);
-    glBufferSubData(GL_UNIFORM_BUFFER, strengthOffset, sizeof(float), & strength);
-    glBufferSubData(GL_UNIFORM_BUFFER, colorOffset, 3 * sizeof(float), color);
-    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+	// Uniform buffer setup for 'Transformations'
+	GLuint transformationBuffer;
+	glGenBuffers(1, &transformationBuffer);
+	glBindBuffer(GL_UNIFORM_BUFFER, transformationBuffer);
+	glBufferData(GL_UNIFORM_BUFFER, 16 * sizeof(float), nullptr, GL_STATIC_DRAW);
+	glBindBufferBase(GL_UNIFORM_BUFFER, 1, transformationBuffer);
+
+	// Set uniform data for 'Transformations'
+	glm::mat4 proj = glm::perspective(glm::radians(45.0f), GLfloat(w) / GLfloat(h), 0.1f, 100.0f);
+	glm::mat4 view = glm::lookAt(
+		glm::vec3(0.5f, 0.0f, 1.0f), // eye pos
+		glm::vec3(0.0f, 0.0f, 0.0f),// target pos
+		glm::vec3(0.0f, 1.0f, 0.0f)// up direction, -1 upside down
+	);
+	auto model = glm::mat4(0.5f); // scale
+	glm::mat4 PVM = proj * view * model;
+	glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), glm::value_ptr(PVM));
 
 
-    glBindBuffer(GL_UNIFORM_BUFFER, transformationBuffer);
-    glBufferData(GL_UNIFORM_BUFFER, 12 * sizeof(float), nullptr, GL_STATIC_DRAW);
-    glBindBufferBase(GL_UNIFORM_BUFFER, 1, transformationBuffer);
+	// Vertex and index buffer setup
+	GLuint v_buffer_handle, i_buffer_handle;
+	glGenBuffers(1, &i_buffer_handle);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, i_buffer_handle);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), indices.data(), GL_STATIC_DRAW);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-    // Create PVM
-    glm::mat4 viewMat = glm::lookAt(
-            glm::vec3(-1.0f, -1.f, -5.0f),
-            glm::vec3(0.0f, 1.0f, 0.0f),
-            glm::vec3(0.0f, 1.0f, 0.0f)
-    );
-    auto[w, h] = frame_buffer_size();
-    glm::mat4 perMat = glm::perspective(glm::radians(45.0f), GLfloat(w) / GLfloat(h), 0.1f, 100.0f);
-    glm::mat4 modelMat = glm::mat4(1.0f);
-    modelMat = glm::rotate(modelMat, glm::radians(115.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-    glm::mat4 PVM = perMat * viewMat * modelMat;
+	glGenBuffers(1, &v_buffer_handle);
+	glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
+	glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-    glBindBuffer(GL_UNIFORM_BUFFER, u_pvm_buffer);
-    glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), &PVM[0][0], GL_STATIC_DRAW);
-    glBindBufferBase(GL_UNIFORM_BUFFER, 1, u_pvm_buffer);
 
-    GLintptr index = 0;
-    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[0]);
-    index += 4 * sizeof(float);
-    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[1]);
-    index += 4 * sizeof(float);
-    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[2]);
-    index += 4 * sizeof(float);
-    glBufferSubData(GL_UNIFORM_BUFFER, index, 4 * sizeof(float), &PVM[3]);
+	// Generate Vertex Array Object (VAO)
+	glGenVertexArrays(1, &vao_);
+	glBindVertexArray(vao_);
+	glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, i_buffer_handle);
 
-    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+	// Specify attribute data
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid*>(0));
 
-    // Generate Vertex Array Object (VAO)
-    glGenVertexArrays(1, &vao_);
-    glBindVertexArray(vao_);
-    glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, i_buffer_handle);
+	glEnableVertexAttribArray(1);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid*>(3 * sizeof(GLfloat)));
 
-    // Specify attribute data
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 7 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindVertexArray(0);
 
-    glEnableVertexAttribArray(1);
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 7 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(3 * sizeof(GLfloat)));
+	// Set OpenGL state
+	glClearColor(0.81f, 0.81f, 0.8f, 1.0f);
 
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
+	glViewport(0, 0, w, h);
 
-    // Set OpenGL state
-    glClearColor(0.81f, 0.81f, 0.8f, 1.0f);
-    auto [viewport_w, viewport_h] = frame_buffer_size();
-    glViewport(0, 0, viewport_w, viewport_h);
+	// Use the shader program
+	glUseProgram(program);
 
-    // Use the shader program
-    glUseProgram(program);
 }
+
 
 //This functions is called every frame and does the actual rendering.
 void SimpleShapeApplication::frame() {
-    glBindVertexArray(vao_);
-    glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_SHORT, (void *)0);
-    glBindVertexArray(0);
+	glBindVertexArray(vao_);
+	glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_SHORT, (void*)0);
+	GLenum error = glGetError();
+	if (error != GL_NO_ERROR) {
+		std::cerr << "Error: OpenGL rendering failed with code " << error << std::endl;
+		exit(EXIT_FAILURE);
+	}
+	glBindVertexArray(0);
 }

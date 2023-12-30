@@ -516,8 +516,8 @@ _deps/spdlog-build/CMakeFiles/spdlog.dir/clean:
 # Target rules for target src/Application/CMakeFiles/application.dir
 
 # All Build rule for target.
-src/Application/CMakeFiles/application.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Application/CMakeFiles/application.dir/all: CMakeFiles/glad.dir/all
+src/Application/CMakeFiles/application.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Application/CMakeFiles/application.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Application\CMakeFiles\application.dir\build.make src/Application/CMakeFiles/application.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Application\CMakeFiles\application.dir\build.make src/Application/CMakeFiles/application.dir/build
@@ -544,10 +544,10 @@ src/Application/CMakeFiles/application.dir/clean:
 # Target rules for target src/ObjectReader/CMakeFiles/objreader.dir
 
 # All Build rule for target.
-src/ObjectReader/CMakeFiles/objreader.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/ObjectReader/CMakeFiles/objreader.dir/all: CMakeFiles/glad.dir/all
-src/ObjectReader/CMakeFiles/objreader.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
+src/ObjectReader/CMakeFiles/objreader.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/ObjectReader/CMakeFiles/objreader.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.dir/all
+src/ObjectReader/CMakeFiles/objreader.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 	$(MAKE) $(MAKESILENT) -f src\ObjectReader\CMakeFiles\objreader.dir\build.make src/ObjectReader/CMakeFiles/objreader.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\ObjectReader\CMakeFiles\objreader.dir\build.make src/ObjectReader/CMakeFiles/objreader.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=K:\studia\grafika3d\cmake-build-debug-mingw\CMakeFiles --progress-num=54,55 "Built target objreader"
@@ -573,10 +573,10 @@ src/ObjectReader/CMakeFiles/objreader.dir/clean:
 # Target rules for target src/XeEngine/CMakeFiles/xe-engine.dir
 
 # All Build rule for target.
-src/XeEngine/CMakeFiles/xe-engine.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/XeEngine/CMakeFiles/xe-engine.dir/all: CMakeFiles/glad.dir/all
-src/XeEngine/CMakeFiles/xe-engine.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
+src/XeEngine/CMakeFiles/xe-engine.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/XeEngine/CMakeFiles/xe-engine.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.dir/all
+src/XeEngine/CMakeFiles/xe-engine.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/XeEngine/CMakeFiles/xe-engine.dir/all: src/ObjectReader/CMakeFiles/objreader.dir/all
 	$(MAKE) $(MAKESILENT) -f src\XeEngine\CMakeFiles\xe-engine.dir\build.make src/XeEngine/CMakeFiles/xe-engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\XeEngine\CMakeFiles\xe-engine.dir\build.make src/XeEngine/CMakeFiles/xe-engine.dir/build
@@ -603,8 +603,8 @@ src/XeEngine/CMakeFiles/xe-engine.dir/clean:
 # Target rules for target src/Engine/CMakeFiles/engine.dir
 
 # All Build rule for target.
-src/Engine/CMakeFiles/engine.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Engine/CMakeFiles/engine.dir/all: CMakeFiles/glad.dir/all
+src/Engine/CMakeFiles/engine.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Engine/CMakeFiles/engine.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Engine\CMakeFiles\engine.dir\build.make src/Engine/CMakeFiles/engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Engine\CMakeFiles\engine.dir\build.make src/Engine/CMakeFiles/engine.dir/build
@@ -631,8 +631,8 @@ src/Engine/CMakeFiles/engine.dir/clean:
 # Target rules for target src/Assignments/Triangle/CMakeFiles/Triangle.dir
 
 # All Build rule for target.
-src/Assignments/Triangle/CMakeFiles/Triangle.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Triangle/CMakeFiles/Triangle.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/Triangle/CMakeFiles/Triangle.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Triangle/CMakeFiles/Triangle.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/Assignments/Triangle/CMakeFiles/Triangle.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Triangle\CMakeFiles\Triangle.dir\build.make src/Assignments/Triangle/CMakeFiles/Triangle.dir/depend
@@ -660,8 +660,8 @@ src/Assignments/Triangle/CMakeFiles/Triangle.dir/clean:
 # Target rules for target src/Assignments/House/CMakeFiles/House.dir
 
 # All Build rule for target.
-src/Assignments/House/CMakeFiles/House.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/House/CMakeFiles/House.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/House/CMakeFiles/House.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/House/CMakeFiles/House.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/Assignments/House/CMakeFiles/House.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\House\CMakeFiles\House.dir\build.make src/Assignments/House/CMakeFiles/House.dir/depend
@@ -689,8 +689,8 @@ src/Assignments/House/CMakeFiles/House.dir/clean:
 # Target rules for target src/Assignments/Colors/CMakeFiles/Colors.dir
 
 # All Build rule for target.
-src/Assignments/Colors/CMakeFiles/Colors.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Colors/CMakeFiles/Colors.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/Colors/CMakeFiles/Colors.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Colors/CMakeFiles/Colors.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/Assignments/Colors/CMakeFiles/Colors.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Colors\CMakeFiles\Colors.dir\build.make src/Assignments/Colors/CMakeFiles/Colors.dir/depend
@@ -718,8 +718,8 @@ src/Assignments/Colors/CMakeFiles/Colors.dir/clean:
 # Target rules for target src/Assignments/Indices/CMakeFiles/Indices.dir
 
 # All Build rule for target.
-src/Assignments/Indices/CMakeFiles/Indices.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Indices/CMakeFiles/Indices.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/Indices/CMakeFiles/Indices.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Indices/CMakeFiles/Indices.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/Assignments/Indices/CMakeFiles/Indices.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Indices\CMakeFiles\Indices.dir\build.make src/Assignments/Indices/CMakeFiles/Indices.dir/depend
@@ -747,8 +747,8 @@ src/Assignments/Indices/CMakeFiles/Indices.dir/clean:
 # Target rules for target src/Assignments/Uniforms/CMakeFiles/Uniforms.dir
 
 # All Build rule for target.
-src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Uniforms\CMakeFiles\Uniforms.dir\build.make src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/depend
@@ -776,8 +776,8 @@ src/Assignments/Uniforms/CMakeFiles/Uniforms.dir/clean:
 # Target rules for target src/Assignments/PVM/CMakeFiles/PVM.dir
 
 # All Build rule for target.
-src/Assignments/PVM/CMakeFiles/PVM.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/PVM/CMakeFiles/PVM.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/PVM/CMakeFiles/PVM.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/PVM/CMakeFiles/PVM.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/Assignments/PVM/CMakeFiles/PVM.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\PVM\CMakeFiles\PVM.dir\build.make src/Assignments/PVM/CMakeFiles/PVM.dir/depend
@@ -805,8 +805,8 @@ src/Assignments/PVM/CMakeFiles/PVM.dir/clean:
 # Target rules for target src/Assignments/Pyramid/CMakeFiles/Pyramid.dir
 
 # All Build rule for target.
-src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/all: CMakeFiles/glad.dir/all
+src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Pyramid\CMakeFiles\Pyramid.dir\build.make src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/depend

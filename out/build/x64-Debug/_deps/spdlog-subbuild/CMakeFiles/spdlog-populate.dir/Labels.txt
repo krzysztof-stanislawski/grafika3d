@@ -1,0 +1,14 @@
+# Target labels
+ spdlog-populate
+# Source files and their labels
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate-complete.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test.rule
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update.rule

@@ -1,0 +1,3 @@
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate.dir
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/CMakeFiles/edit_cache.dir
+K:/studia/grafika3d/out/build/x64-Debug/_deps/spdlog-subbuild/CMakeFiles/rebuild_cache.dir

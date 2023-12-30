@@ -5,11 +5,10 @@ layout(std140, binding = 0) uniform Modifier {
     vec3  color;
 };
 
-in vec3 FragColor;                          // Input interpolated color from vertex shader
+in vec3 FragColor;
 
-layout(location = 0) out vec4 FragColorOut; // Output final color
+layout(location = 0) out vec4 FragColorOut;
 
 void main() {
-    vec3 modifiedColor = FragColor * color * strength;  // Modify the color using buffer data
-    FragColorOut = vec4(modifiedColor, 1.0);    // Set fragment color
+    FragColorOut = vec4(strength * color, 1.0);
 }

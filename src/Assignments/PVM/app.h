@@ -22,4 +22,5 @@ public:
 
 private:
     GLuint vao_;
+    std::vector<GLushort> indices;
 };
