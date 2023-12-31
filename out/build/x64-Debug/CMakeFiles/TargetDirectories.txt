@@ -112,3 +112,9 @@ K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Zoom/CMakeFiles/rebuild_
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Zoom/CMakeFiles/list_install_components.dir
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Zoom/CMakeFiles/install.dir
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Zoom/CMakeFiles/install/local.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/CameraMovement.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/edit_cache.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/rebuild_cache.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/list_install_components.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/install.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/install/local.dir
