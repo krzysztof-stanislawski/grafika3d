@@ -91,10 +91,6 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_UNIFORM_BUFFER, uniformBuffer);
     glBufferData(GL_UNIFORM_BUFFER, 8 * sizeof(float), nullptr, GL_STATIC_DRAW);
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, uniformBuffer);
-    float strength = 1.0f;
-    float color[3] = {1.0f, 1.0f, 1.0f};
-    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(float), &strength);
-    //glBufferSubData(GL_UNIFORM_BUFFER, 4 * sizeof(float), 3 * sizeof(float), &color);
 
     // Uniform buffer setup for 'Transformations'
     glGenBuffers(1, &transformationBuffer);
@@ -123,8 +119,7 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-
-
+    
     // Generate Vertex Array Object (VAO)
     glGenVertexArrays(1, &vao_);
     glBindVertexArray(vao_);
@@ -134,9 +129,6 @@ void SimpleShapeApplication::init() {
     // Specify attribute data
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
-
-    //glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(3 * sizeof(GLfloat)));
-    //glEnableVertexAttribArray(1);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
