@@ -381,6 +381,71 @@ Pyramid/fast:
 	$(MAKE) $(MAKESILENT) -f src\Assignments\Pyramid\CMakeFiles\Pyramid.dir\build.make src/Assignments/Pyramid/CMakeFiles/Pyramid.dir/build
 .PHONY : Pyramid/fast
 
+#=============================================================================
+# Target rules for targets named Resizing
+
+# Build rule for target.
+Resizing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Resizing
+.PHONY : Resizing
+
+# fast build rule for target.
+Resizing/fast:
+	$(MAKE) $(MAKESILENT) -f src\Assignments\Resizing\CMakeFiles\Resizing.dir\build.make src/Assignments/Resizing/CMakeFiles/Resizing.dir/build
+.PHONY : Resizing/fast
+
+#=============================================================================
+# Target rules for targets named Zoom
+
+# Build rule for target.
+Zoom: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Zoom
+.PHONY : Zoom
+
+# fast build rule for target.
+Zoom/fast:
+	$(MAKE) $(MAKESILENT) -f src\Assignments\Zoom\CMakeFiles\Zoom.dir\build.make src/Assignments/Zoom/CMakeFiles/Zoom.dir/build
+.PHONY : Zoom/fast
+
+#=============================================================================
+# Target rules for targets named CameraMovement
+
+# Build rule for target.
+CameraMovement: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CameraMovement
+.PHONY : CameraMovement
+
+# fast build rule for target.
+CameraMovement/fast:
+	$(MAKE) $(MAKESILENT) -f src\Assignments\CameraMovement\CMakeFiles\CameraMovement.dir\build.make src/Assignments/CameraMovement/CMakeFiles/CameraMovement.dir/build
+.PHONY : CameraMovement/fast
+
+#=============================================================================
+# Target rules for targets named MeshesMaterials
+
+# Build rule for target.
+MeshesMaterials: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MeshesMaterials
+.PHONY : MeshesMaterials
+
+# fast build rule for target.
+MeshesMaterials/fast:
+	$(MAKE) $(MAKESILENT) -f src\Assignments\MeshesMaterials\CMakeFiles\MeshesMaterials.dir\build.make src/Assignments/MeshesMaterials/CMakeFiles/MeshesMaterials.dir/build
+.PHONY : MeshesMaterials/fast
+
+#=============================================================================
+# Target rules for targets named Textures
+
+# Build rule for target.
+Textures: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Textures
+.PHONY : Textures
+
+# fast build rule for target.
+Textures/fast:
+	$(MAKE) $(MAKESILENT) -f src\Assignments\Textures\CMakeFiles\Textures.dir\build.make src/Assignments/Textures/CMakeFiles/Textures.dir/build
+.PHONY : Textures/fast
+
 src/3rdParty/glad/glad_4_6/glad/src/gl.obj: src/3rdParty/glad/glad_4_6/glad/src/gl.c.obj
 .PHONY : src/3rdParty/glad/glad_4_6/glad/src/gl.obj
 
@@ -419,13 +484,18 @@ help:
 	@echo ... rebuild_cache
 	@echo ... uninstall
 	@echo ... update_mappings
+	@echo ... CameraMovement
 	@echo ... Colors
 	@echo ... House
 	@echo ... Indices
+	@echo ... MeshesMaterials
 	@echo ... PVM
 	@echo ... Pyramid
+	@echo ... Resizing
+	@echo ... Textures
 	@echo ... Triangle
 	@echo ... Uniforms
+	@echo ... Zoom
 	@echo ... application
 	@echo ... engine
 	@echo ... glad

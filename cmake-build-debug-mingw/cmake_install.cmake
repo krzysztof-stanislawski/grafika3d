@@ -107,6 +107,31 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Pyramid/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Resizing/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Zoom/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/CameraMovement/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/MeshesMaterials/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("K:/studia/grafika3d/cmake-build-debug-mingw/src/Assignments/Textures/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

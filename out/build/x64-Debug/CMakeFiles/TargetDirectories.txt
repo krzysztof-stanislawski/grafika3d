@@ -118,3 +118,9 @@ K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFile
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/list_install_components.dir
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/install.dir
 K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/CameraMovement/CMakeFiles/install/local.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Textures/CMakeFiles/Textures.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Textures/CMakeFiles/edit_cache.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Textures/CMakeFiles/rebuild_cache.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Textures/CMakeFiles/list_install_components.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Textures/CMakeFiles/install.dir
+K:/studia/grafika3d/out/build/x64-Debug/src/Assignments/Textures/CMakeFiles/install/local.dir

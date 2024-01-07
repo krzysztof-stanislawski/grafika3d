@@ -3,18 +3,13 @@
 -- GLM: Version 0.9.9.9
 -- Build spdlog: 1.12.0
 -- Build type: Debug
-Warning: directory K:/studia/grafika3d/src/Assignments/Resizing does not exists.
-Warning: directory K:/studia/grafika3d/src/Assignments/Zoom does not exists.
-Warning: directory K:/studia/grafika3d/src/Assignments/CameraMovement does not exists.
 Warning: directory K:/studia/grafika3d/src/Assignments/Meshes does not exists.
 Warning: directory K:/studia/grafika3d/src/Assignments/Materials does not exists.
-Warning: directory K:/studia/grafika3d/src/Assignments/MeshesMaterials does not exists.
 Warning: directory K:/studia/grafika3d/src/Assignments/SceneGraph does not exists.
-Warning: directory K:/studia/grafika3d/src/Assignments/Textures does not exists.
 Warning: directory K:/studia/grafika3d/src/Assignments/Phong does not exists.
 Warning: directory K:/studia/grafika3d/src/Assignments/PBR does not exists.
 Warning: directory K:/studia/grafika3d/src/Assignments/MultipleLights does not exists.
 Warning: directory K:/studia/grafika3d/src/Assignments/NormalMaps does not exists.
--- Configuring done (7.3s)
+-- Configuring done (7.8s)
 -- Generating done (0.4s)
 -- Build files have been written to: K:/studia/grafika3d/cmake-build-debug-mingw
