@@ -18,7 +18,7 @@
 #include "XeEngine/ColorMaterial.h"
 #include "XeEngine/PhongMaterial.h"
 #include "XeEngine/Mesh.h"
-
+using namespace glm;
 
 namespace {
     xe::ColorMaterial *make_color_material(const xe::mtl_material_t &mat, std::string mtl_dir);
